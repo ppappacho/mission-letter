@@ -151,31 +151,22 @@
         </div>
     </header>
 
-    <section class="relative pt-8 pb-12 md:pt-14 md:pb-16 px-4 overflow-hidden">
+   <section class="relative pt-8 pb-12 md:pt-14 md:pb-16 px-4 overflow-hidden">
         
-        <!-- Ecuador Flag & Map Soft Background Overlays -->
+        <!-- 에콰도르 지도 & 국기 배경 오버레이 (현장감 배가) -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <!-- Ecuador Flag Stripe Colors Accent Top Bar -->
+            <!-- 에콰도르 국기 상단 포인트 스트라이프 -->
             <div class="w-full h-2.5 flex">
                 <div class="w-1/2 bg-amber-400 opacity-80"></div>
                 <div class="w-1/4 bg-blue-700 opacity-80"></div>
                 <div class="w-1/4 bg-red-600 opacity-80"></div>
             </div>
 
-            <!-- Soft Ecuador Map Vector Outline Background Watermark -->
-            <div class="absolute right-[-10%] top-[10%] w-[90%] md:w-[50%] h-[80%] opacity-15 filter blur-[1px] transform rotate-6">
-                <svg viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-kfhi-800 stroke-current stroke-2">
-                    <!-- Stylized Map Silhouette of Ecuador & Galapagos -->
-                    <path d="M180,80 Q240,70 320,100 T420,160 Q450,230 410,310 T350,420 Q300,500 240,540 T160,460 Q140,360 170,270 Z" fill="rgba(0,140,69,0.08)" />
-                    <circle cx="70" cy="380" r="12" fill="rgba(0,140,69,0.15)" />
-                    <circle cx="95" cy="400" r="8" fill="rgba(0,140,69,0.15)" />
-                    <circle cx="110" cy="365" r="10" fill="rgba(0,140,69,0.15)" />
-                </svg>
-            </div>
-
-            <!-- Blurred Background Image with warm gradient overlay -->
-            <div class="absolute inset-0 bg-cover bg-center filter blur-md scale-105 opacity-15" style="background-image: url('image_2f4a14.jpg');"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-warm-50/90 to-warm-50"></div>
+            <!-- 선명한 에콰도르 지도 실물 배경 이미지 (ecu_bg.png 적용) -->
+            <div class="absolute inset-0 bg-cover bg-center md:bg-right-center opacity-45 transform scale-100 transition-all duration-500" style="background-image: url('ecu_bg.png');"></div>
+            
+            <!-- 텍스트 가독성을 위한 은은한 가오시안 입체 그라데이션 -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/85 via-warm-50/70 to-[#fcfaf6]"></div>
         </div>
 
         <div class="max-w-3xl mx-auto text-center relative z-10">
@@ -186,7 +177,7 @@
                     <span>제21호 · 2026년 9월 소식</span>
                 </span>
                 <span class="px-3.5 py-1 rounded-full bg-white/95 text-kfhi-900 text-xs font-bold border border-kfhi-200 shadow-sm flex items-center gap-1.5 backdrop-blur-sm">
-                    <!-- Ecuador Flag Mini Icon -->
+                    <!-- 에콰도르 미니 국기 아이콘 -->
                     <span class="inline-flex overflow-hidden rounded-xs w-4 h-3 border border-gray-300">
                         <span class="w-1/2 bg-yellow-400"></span>
                         <span class="w-1/4 bg-blue-600"></span>
@@ -196,16 +187,16 @@
                 </span>
             </div>
             
-            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-3 serif-title tracking-tight">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-3 serif-title tracking-tight drop-shadow-xs">
                 화평으로 심은 열매
             </h1>
             
             <p class="text-sm md:text-base text-gray-700 mb-6 font-medium">
-                <span class="text-kfhi-900 font-bold bg-kfhi-100/90 px-3 py-1 rounded-lg border border-kfhi-200 shadow-xs">조완희 · 김영선 (하윤, 하성) 선교사 가정</span>
+                <span class="text-kfhi-900 font-bold bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-kfhi-200/80 shadow-xs">조완희 · 김영선 (하윤, 하성) 선교사 가정</span>
             </p>
 
-            <!-- Detailed Missionary Greetings Card -->
-            <div class="glass-card p-6 md:p-8 rounded-3xl shadow-float max-w-2xl mx-auto mb-6 text-left relative overflow-hidden border border-kfhi-200">
+            <!-- 인사말 플로팅 카드 (Glassmorphism 적용) -->
+            <div class="glass-card p-6 md:p-8 rounded-3xl shadow-float max-w-2xl mx-auto mb-6 text-left relative overflow-hidden border border-kfhi-200/80 bg-white/90 backdrop-blur-md">
                 <div class="flex items-center gap-3.5 mb-4 border-b border-kfhi-100 pb-3.5">
                     <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-kfhi-800 via-kfhi-600 to-teal-500 text-white flex items-center justify-center text-lg font-bold shadow shrink-0">
                         <i class="fa-solid fa-cross"></i>
@@ -230,19 +221,19 @@
                 </div>
             </div>
 
-            <!-- Quick Navigation Hub -->
+            <!-- 퀵 네비게이션 버튼 그룹 -->
             <div class="grid grid-cols-3 gap-2 md:gap-3 max-w-md mx-auto">
-                <a href="#stories" class="bg-white/90 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group">
+                <a href="#stories" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
                     <i class="fa-solid fa-book-open text-kfhi-600 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
                     <p class="text-[10px] text-gray-500">3가지 사역 이야기</p>
                     <p class="text-xs font-bold text-gray-900">사역뉴스</p>
                 </a>
-                <a href="#prayers" class="bg-white/90 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group">
+                <a href="#prayers" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
                     <i class="fa-solid fa-hands-praying text-teal-600 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
                     <p class="text-[10px] text-gray-500">2026.9 중보기도</p>
                     <p class="text-xs font-bold text-gray-900">기도제목</p>
                 </a>
-                <a href="#support" class="bg-white/90 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group">
+                <a href="#support" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
                     <i class="fa-solid fa-heart text-rose-500 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
                     <p class="text-[10px] text-gray-500">동역의 마음</p>
                     <p class="text-xs font-bold text-gray-900">후원안내</p>
