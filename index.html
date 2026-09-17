@@ -61,35 +61,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* 60대 이상 시니어 모바일 최적화를 위해 전체 기본 font-size 업스케일링 */
-        html {
-            font-size: 118.75%; /* 기본 16px -> 약 19px 기준으로 비율 확대 */
-        }
-
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #fcfaf6;
-            color: #1a1d20; /* 가독성을 위한 짙은 명암 적용 */
+            color: #2c323b;
             -webkit-tap-highlight-color: transparent;
-            word-break: keep-all; /* 한글 단어 끊김 방지로 가독성 증대 */
         }
-        
-        p, span, h1, h2, h3, a, button {
-            letter-spacing: -0.02em; /* 시니어 한글 가독성 향상 */
-        }
-
         .serif-title {
             font-family: 'Gowun Batang', 'Nanum Myeongjo', serif;
         }
         .glass-nav {
-            background: rgba(255, 255, 255, 0.96);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.93);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(0, 140, 69, 0.18);
+            border: 1px solid rgba(0, 140, 69, 0.15);
         }
         
         /* Floating Heart Animation */
@@ -129,29 +118,31 @@
     <div id="scroll-progress" class="fixed top-0 left-0 h-1.5 bg-gradient-to-r from-kfhi-500 via-kfhi-600 to-teal-700 z-50 transition-all duration-150 w-0"></div>
 
     <header class="sticky top-0 z-40 glass-nav border-b border-kfhi-100/80 transition-all duration-300">
-        <div class="max-w-4xl mx-auto px-3 md:px-4 h-18 flex items-center justify-between gap-2">
+        <div class="max-w-4xl mx-auto px-3 md:px-4 h-16 flex items-center justify-between gap-2">
             
             <!-- Left: Korean Methodist Church Logo -->
             <a href="#" class="flex items-center gap-2 hover:opacity-90 transition shrink-0">
-                <img src="logo_1.png" alt="기독교대한감리회" class="h-9 md:h-11 w-auto object-contain">
-                <span class="hidden lg:inline text-sm font-bold text-gray-900 leading-tight">기독교대한감리회<br/><span class="text-xs text-kfhi-700 font-semibold">파송교회 광명교회</span></span>
+                <!-- [로고 교체 1-1] 기독교대한감리회 로고 주소를 src="..."에 입력하세요 -->
+                <img src="logo_1.png" alt="기독교대한감리회" class="h-8 md:h-10 w-auto object-contain">
+                <span class="hidden lg:inline text-xs font-bold text-gray-800 leading-tight">기독교대한감리회<br/><span class="text-[10px] text-kfhi-700 font-normal">파송교회 광명교회</span></span>
             </a>
 
             <!-- Center Issue Title Badge -->
-            <div class="flex items-center gap-2 mx-auto">
-                <span class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-sm shadow-sm">
+            <div class="flex items-center gap-1.5 md:gap-2 mx-auto">
+                <span class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-xs shadow-sm">
                     21호
                 </span>
                 <div class="flex flex-col text-center">
-                    <span class="text-xs text-kfhi-800 font-extrabold tracking-widest uppercase">에콰도르 선교소식</span>
-                    <span class="text-sm md:text-base font-bold text-gray-900 serif-title leading-tight">화평으로 심은 열매</span>
+                    <span class="text-[9px] md:text-[10px] text-kfhi-700 font-extrabold tracking-widest uppercase">에콰도르 선교소식</span>
+                    <span class="text-xs md:text-sm font-bold text-gray-900 serif-title leading-tight">화평으로 심은 열매</span>
                 </div>
             </div>
 
             <!-- Right: KFHI Hope Friend Logo & Action -->
             <div class="flex items-center gap-2 shrink-0">
-                <img src="logo_2.png" alt="희망친구 기아대책" class="h-7 md:h-9 w-auto object-contain">
-                <a href="#support" class="hidden sm:flex items-center gap-1.5 bg-kfhi-600 hover:bg-kfhi-700 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow-sm">
+                <!-- [로고 교체 2-1] 희망친구 기아대책 로고 주소를 src="..."에 입력하세요 -->
+                <img src="logo_2.png" alt="희망친구 기아대책" class="h-6 md:h-8 w-auto object-contain">
+                <a href="#support" class="hidden sm:flex items-center gap-1.5 bg-kfhi-600 hover:bg-kfhi-700 text-white text-xs font-bold px-3.5 py-2 rounded-full transition shadow-sm">
                     <i class="fa-solid fa-heart text-xs"></i>
                     <span>후원하기</span>
                 </a>
@@ -162,27 +153,31 @@
 
    <section class="relative pt-8 pb-12 md:pt-14 md:pb-16 px-4 overflow-hidden">
         
-        <!-- 에콰도르 지도 & 국기 배경 오버레이 -->
+        <!-- 에콰도르 지도 & 국기 배경 오버레이 (현장감 배가) -->
         <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <!-- 에콰도르 국기 상단 포인트 스트라이프 -->
             <div class="w-full h-2.5 flex">
                 <div class="w-1/2 bg-amber-400 opacity-75"></div>
                 <div class="w-1/4 bg-blue-700 opacity-75"></div>
                 <div class="w-1/4 bg-red-600 opacity-75"></div>
             </div>
 
+            <!-- 선명한 에콰도르 지도 실물 배경 이미지 (ecu_bg.png 적용) -->
             <div class="absolute inset-0 bg-cover bg-center md:bg-right-center opacity-60 transform scale-90 transition-all duration-500" style="background-image: url('ecu_bg.png');"></div>
             
+            <!-- 텍스트 가독성을 위한 은은한 가오시안 입체 그라데이션 -->
             <div class="absolute inset-0 bg-gradient-to-b from-white/85 via-warm-50/70 to-[#fcfaf6]"></div>
         </div>
 
         <div class="max-w-3xl mx-auto text-center relative z-10">
             
             <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
-                <span class="px-4 py-1.5 rounded-full bg-kfhi-600 text-white text-xs md:text-sm font-bold shadow-sm flex items-center gap-1.5">
+                <span class="px-3.5 py-1 rounded-full bg-kfhi-600 text-white text-xs font-bold shadow-sm flex items-center gap-1.5">
                     <i class="fa-solid fa-earth-americas"></i>
                     <span>제21호 · 2026년 9월 소식</span>
                 </span>
-                <span class="px-4 py-1.5 rounded-full bg-white/95 text-kfhi-900 text-xs md:text-sm font-bold border border-kfhi-200 shadow-sm flex items-center gap-1.5 backdrop-blur-sm">
+                <span class="px-3.5 py-1 rounded-full bg-white/95 text-kfhi-900 text-xs font-bold border border-kfhi-200 shadow-sm flex items-center gap-1.5 backdrop-blur-sm">
+                    <!-- 에콰도르 미니 국기 아이콘 -->
                     <span class="inline-flex overflow-hidden rounded-xs w-4 h-3 border border-gray-300">
                         <span class="w-1/2 bg-yellow-400"></span>
                         <span class="w-1/4 bg-blue-600"></span>
@@ -192,35 +187,35 @@
                 </span>
             </div>
             
-            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4 serif-title tracking-tight drop-shadow-xs">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-3 serif-title tracking-tight drop-shadow-xs">
                 화평으로 심은 열매
             </h1>
             
-            <p class="text-base md:text-lg text-gray-800 mb-6 font-semibold">
-                <span class="text-kfhi-900 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg border border-kfhi-200/80 shadow-xs inline-block">조완희 · 김영선 (하윤, 하성) 선교사 가정</span>
+            <p class="text-sm md:text-base text-gray-700 mb-6 font-medium">
+                <span class="text-kfhi-900 font-bold bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-kfhi-200/80 shadow-xs">조완희 · 김영선 (하윤, 하성) 선교사 가정</span>
             </p>
 
-            <!-- 인사말 플로팅 카드 -->
+            <!-- 인사말 플로팅 카드 (Glassmorphism 적용) -->
             <div class="glass-card p-6 md:p-8 rounded-3xl shadow-float max-w-2xl mx-auto mb-6 text-left relative overflow-hidden border border-kfhi-200/80 bg-white/90 backdrop-blur-md">
                 <div class="flex items-center gap-3.5 mb-4 border-b border-kfhi-100 pb-3.5">
-                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-kfhi-800 via-kfhi-600 to-teal-500 text-white flex items-center justify-center text-xl font-bold shadow shrink-0">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-kfhi-800 via-kfhi-600 to-teal-500 text-white flex items-center justify-center text-lg font-bold shadow shrink-0">
                         <i class="fa-solid fa-cross"></i>
                     </div>
                     <div>
-                        <span class="text-xs font-extrabold text-kfhi-700 block tracking-wider uppercase">Ecuador Mission Letter</span>
-                        <h2 class="text-base md:text-lg font-bold text-gray-900">에콰도르 조완희 · 김영선 선교사 가정의 인사</h2>
+                        <span class="text-[10px] font-extrabold text-kfhi-700 block tracking-wider uppercase">Ecuador Mission Letter</span>
+                        <h2 class="text-xs md:text-sm font-bold text-gray-900">에콰도르 조완희 · 김영선 선교사 가정의 인사</h2>
                     </div>
                 </div>
 
-                <div class="space-y-4 text-base md:text-lg text-gray-800 leading-relaxed font-normal">
-                    <p class="font-bold text-kfhi-800 flex flex-wrap items-center gap-2">
+                <div class="space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed font-normal">
+                    <p class="font-bold text-kfhi-800 text-sm flex items-center gap-2">
                         <span>La paz de Cristo~</span>
-                        <span class="text-xs md:text-sm bg-kfhi-100 text-kfhi-900 px-3 py-1 rounded-full font-semibold">주님의 평안을 전합니다.</span>
+                        <span class="text-[11px] bg-kfhi-100 text-kfhi-900 px-2.5 py-0.5 rounded-full font-normal">주님의 평안을 전합니다.</span>
                     </p>
-                    <p class="text-gray-900 leading-relaxed">
+                    <p class="text-gray-800 leading-relaxed">
                         사랑하는 후원자분들과 기도의 동역자 여러분, 적도의 햇살과 맑은 바람이 있는 에콰도르에서 감사와 축복의 인사를 올려드립니다. 
                     </p>
-                    <p class="text-gray-900 leading-relaxed">
+                    <p class="text-gray-700 leading-relaxed">
                         먼 거리 속에서도 늘 마음과 기도로 저희 가정과 현지 사역을 지탱해 주시는 동역자 여러분이 계시기에, 저희는 따뜻한 위로와 힘을 얻고 기쁨으로 현장 사역을 이어가고 있습니다. 동역자 여러분의 일터와 가정 가운데 주님의 깊은 평안과 풍성한 은혜가 늘 함께하기를 간절히 소원합니다.
                     </p>
                 </div>
@@ -228,20 +223,20 @@
 
             <!-- 퀵 네비게이션 버튼 그룹 -->
             <div class="grid grid-cols-3 gap-2 md:gap-3 max-w-md mx-auto">
-                <a href="#stories" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3.5 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
-                    <i class="fa-solid fa-book-open text-kfhi-600 text-lg md:text-xl mb-1 group-hover:scale-110 transition-transform"></i>
-                    <p class="text-xs text-gray-600">3가지 사역 이야기</p>
-                    <p class="text-sm font-bold text-gray-900">사역뉴스</p>
+                <a href="#stories" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
+                    <i class="fa-solid fa-book-open text-kfhi-600 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
+                    <p class="text-[10px] text-gray-500">3가지 사역 이야기</p>
+                    <p class="text-xs font-bold text-gray-900">사역뉴스</p>
                 </a>
-                <a href="#prayers" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3.5 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
-                    <i class="fa-solid fa-hands-praying text-teal-600 text-lg md:text-xl mb-1 group-hover:scale-110 transition-transform"></i>
-                    <p class="text-xs text-gray-600">2026.9 중보기도</p>
-                    <p class="text-sm font-bold text-gray-900">기도제목</p>
+                <a href="#prayers" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
+                    <i class="fa-solid fa-hands-praying text-teal-600 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
+                    <p class="text-[10px] text-gray-500">2026.9 중보기도</p>
+                    <p class="text-xs font-bold text-gray-900">기도제목</p>
                 </a>
-                <a href="#support" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3.5 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
-                    <i class="fa-solid fa-heart text-rose-500 text-lg md:text-xl mb-1 group-hover:scale-110 transition-transform"></i>
-                    <p class="text-xs text-gray-600">동역의 마음</p>
-                    <p class="text-sm font-bold text-gray-900">후원안내</p>
+                <a href="#support" class="bg-white/95 hover:bg-kfhi-50 border border-kfhi-200 p-3 rounded-2xl shadow-sm hover:shadow transition text-center group backdrop-blur-sm">
+                    <i class="fa-solid fa-heart text-rose-500 text-base md:text-lg mb-1 group-hover:scale-110 transition-transform"></i>
+                    <p class="text-[10px] text-gray-500">동역의 마음</p>
+                    <p class="text-xs font-bold text-gray-900">후원안내</p>
                 </a>
             </div>
 
@@ -251,8 +246,9 @@
     <section class="py-4 px-4">
         <div class="max-w-3xl mx-auto space-y-4">
             
-            <div class="bg-white/95 p-6 md:p-8 rounded-3xl border border-kfhi-100 shadow-card text-gray-900 text-base md:text-lg leading-relaxed space-y-4 relative backdrop-blur-sm">
-                <div class="inline-flex items-center gap-2 bg-kfhi-100 text-kfhi-900 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full border border-kfhi-200">
+            <!-- Restored Rich Intro Card -->
+            <div class="bg-white/95 p-6 md:p-8 rounded-3xl border border-kfhi-100 shadow-card text-gray-700 text-xs md:text-sm leading-relaxed space-y-3.5 relative backdrop-blur-sm">
+                <div class="inline-flex items-center gap-2 bg-kfhi-100 text-kfhi-900 text-xs font-bold px-3.5 py-1 rounded-full border border-kfhi-200">
                     <i class="fa-solid fa-envelope-open-text"></i>
                     <span>소식지를 열며</span>
                 </div>
@@ -261,10 +257,10 @@
                     뜨거웠던 여름 계절이 지나가고, 아침저녁으로 느껴지는 선선한 공기와 함께 가을의 결실들이 맺어져 가고 있습니다. 만물을 각기 때에 따라 아름답게 돌보시는 하나님의 신실하신 은혜와 사랑을 날마다 고백하게 됩니다.
                 </p>
                 <p>
-                    최근 저희 가정은 한국에서의 급작스러운 상황과 에콰도르 현지 사역을 오가며 참으로 많은 눈물과 기도 속에 시간을 보냈습니다. 때로는 한 치 앞도 예측하기 힘든 막막함이 찾아오기도 했지만, 그 과정 속에서 하나님께서는 <strong class="text-kfhi-900 font-extrabold bg-kfhi-50 px-1">'하나님의 때를 기다리는 정직한 순종'</strong>이 무엇인지 가르쳐 주셨습니다.
+                    최근 저희 가정은 한국에서의 급작스러운 상황과 에콰도르 현지 사역을 오가며 참으로 많은 눈물과 기도 속에 시간을 보냈습니다. 때로는 한 치 앞도 예측하기 힘든 막막함이 찾아오기도 했지만, 그 과정 속에서 하나님께서는 <strong>'하나님의 때를 기다리는 정직한 순종'</strong>이 무엇인지 가르쳐 주셨습니다.
                 </p>
                 <p>
-                    또한 멀리 계심에도 현지의 안타까운 소식에 함께 가슴 졸이며 눈물로 중보해 주신 <strong class="text-kfhi-900 font-extrabold bg-kfhi-50 px-1">'동역자(열매지기) 여러분의 온기 넘치는 기도의 힘'</strong>이 선교 현장에서 얼마나 커다란 위로이자 버팀목이 되는지 가슴 깊이 깨닫게 되었습니다.
+                    또한 멀리 계심에도 현지의 안타까운 소식에 함께 가슴 졸이며 눈물로 중보해 주신 <strong>'동역자(열매지기) 여러분의 온기 넘치는 기도의 힘'</strong>이 선교 현장에서 얼마나 커다란 위로이자 버팀목이 되는지 가슴 깊이 깨닫게 되었습니다.
                 </p>
                 <p>
                     이번 21호 소식지에 정성스레 담아낸 에콰도르 현지의 은혜로운 소식들이, 동역자 여러분의 일상에도 살아계신 주님의 화평과 따뜻한 소망으로 닿기를 간절히 기도합니다.
@@ -272,19 +268,19 @@
             </div>
 
             <!-- Scripture Spotlight Banner -->
-            <div class="bg-gradient-to-br from-kfhi-900 via-kfhi-800 to-teal-950 text-white p-6 md:p-8 rounded-3xl shadow-float relative overflow-hidden">
+            <div class="bg-gradient-to-br from-kfhi-900 via-kfhi-800 to-teal-950 text-white p-6 md:p-7 rounded-3xl shadow-float relative overflow-hidden">
                 <div class="flex items-center justify-between mb-3">
-                    <span class="text-xs md:text-sm uppercase tracking-widest text-kfhi-300 font-bold flex items-center gap-1.5">
+                    <span class="text-xs uppercase tracking-widest text-kfhi-300 font-bold flex items-center gap-1.5">
                         <i class="fa-solid fa-bible"></i>
                         <span>고린도후서 1:11</span>
                     </span>
-                    <button onclick="copyToClipboard('너희도 우리를 위하여 간구함으로 도우라 이는 우리가 많은 사람의 기도로 얻은 은사로 말미암아 많은 사람이 우리를 위하여 감사하게 하려 함이라 (고린도후서 1:11)', '말씀 구절이 복사되었습니다.')" class="text-xs text-kfhi-100 hover:text-white bg-white/10 hover:bg-white/20 px-3.5 py-1.5 rounded-full transition flex items-center gap-1 font-medium">
+                    <button onclick="copyToClipboard('너희도 우리를 위하여 간구함으로 도우라 이는 우리가 많은 사람의 기도로 얻은 은사로 말미암아 많은 사람이 우리를 위하여 감사하게 하려 함이라 (고린도후서 1:11)', '말씀 구절이 복사되었습니다.')" class="text-[11px] text-kfhi-200 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition flex items-center gap-1">
                         <i class="fa-regular fa-copy"></i>
                         <span>구절 복사</span>
                     </button>
                 </div>
                 
-                <blockquote class="text-base md:text-lg font-normal leading-relaxed serif-title italic text-kfhi-50">
+                <blockquote class="text-xs md:text-sm font-normal leading-relaxed serif-title italic text-kfhi-50">
                     "너희도 우리를 위하여 간구함으로 도우라 이는 우리가 많은 사람의 기도로 얻은 은사로 말미암아 많은 사람이 우리를 위하여 감사하게 하려 함이라"
                 </blockquote>
             </div>
@@ -297,50 +293,50 @@
             
             <!-- Section Header -->
             <div class="text-center">
-                <span class="text-kfhi-800 text-xs md:text-sm font-extrabold tracking-widest uppercase block mb-1">Ecuador Mission Stories</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 serif-title">에콰도르 사역 이야기</h2>
-                <p class="text-sm md:text-base text-gray-700 mt-1 font-medium">현지 현장에서 일어난 주님의 선하신 은혜와 회복의 소식입니다.</p>
-                <div class="w-16 h-1 bg-gradient-to-r from-kfhi-500 to-teal-600 mx-auto mt-2 rounded-full"></div>
+                <span class="text-kfhi-700 text-xs font-extrabold tracking-widest uppercase block mb-1">Ecuador Mission Stories</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 serif-title">에콰도르 사역 이야기</h2>
+                <p class="text-xs text-gray-500 mt-1">현지 현장에서 일어난 주님의 선하신 은혜와 회복의 소식입니다.</p>
+                <div class="w-12 h-1 bg-gradient-to-r from-kfhi-500 to-teal-600 mx-auto mt-2 rounded-full"></div>
             </div>
 
             <!-- Story Category Filter Tabs -->
             <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none snap-x">
-                <button onclick="switchStoryTab('all')" id="tab-all" class="story-tab active-tab snap-start shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition bg-kfhi-600 text-white shadow-sm">
+                <button onclick="switchStoryTab('all')" id="tab-all" class="story-tab active-tab snap-start shrink-0 px-4 py-2 rounded-full text-xs font-bold transition bg-kfhi-600 text-white shadow-sm">
                     ✨ 전체 소식 보기
                 </button>
-                <button onclick="switchStoryTab('story1')" id="tab-story1" class="story-tab snap-start shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition bg-white border border-gray-300 text-gray-800 hover:bg-kfhi-50">
+                <button onclick="switchStoryTab('story1')" id="tab-story1" class="story-tab snap-start shrink-0 px-4 py-2 rounded-full text-xs font-bold transition bg-white border border-gray-200 text-gray-700 hover:bg-kfhi-50">
                     💧 #1. 회복과 세례
                 </button>
-                <button onclick="switchStoryTab('story2')" id="tab-story2" class="story-tab snap-start shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition bg-white border border-gray-300 text-gray-800 hover:bg-kfhi-50">
+                <button onclick="switchStoryTab('story2')" id="tab-story2" class="story-tab snap-start shrink-0 px-4 py-2 rounded-full text-xs font-bold transition bg-white border border-gray-200 text-gray-700 hover:bg-kfhi-50">
                     🏫 #2. 학교 &amp; 보건사역
                 </button>
-                <button onclick="switchStoryTab('story3')" id="tab-story3" class="story-tab snap-start shrink-0 px-4 py-2.5 rounded-full text-xs md:text-sm font-bold transition bg-white border border-gray-300 text-gray-800 hover:bg-kfhi-50">
+                <button onclick="switchStoryTab('story3')" id="tab-story3" class="story-tab snap-start shrink-0 px-4 py-2 rounded-full text-xs font-bold transition bg-white border border-gray-200 text-gray-700 hover:bg-kfhi-50">
                     🏡 #3. 화평가족 &amp; 선교사대회
                 </button>
             </div>
 
-            <!-- STORY CARD #1 -->
+            <!-- STORY CARD #1 (Restored Full Text & Nuance) -->
             <article id="story-card-1" class="story-card-item bg-white/95 rounded-3xl border border-kfhi-100 shadow-card overflow-hidden transition hover:shadow-float backdrop-blur-sm">
-                <div class="p-6 md:p-8 space-y-5">
+                <div class="p-6 md:p-8 space-y-4">
                     
                     <div class="flex items-center justify-between flex-wrap gap-2 border-b border-gray-100 pb-3.5">
-                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-kfhi-50 border border-kfhi-200 text-kfhi-900 rounded-full text-xs md:text-sm font-bold">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-kfhi-50 border border-kfhi-200 text-kfhi-800 rounded-full text-xs font-bold">
                             <i class="fa-solid fa-heart-pulse text-kfhi-600"></i>
                             <span>#1. 회복의 은혜와 기다림 속에 진행된 세례식</span>
                         </span>
-                        <span class="text-xs text-gray-500 font-medium">한국 &amp; 에콰도르 현장 소식</span>
+                        <span class="text-xs text-gray-400 font-medium">한국 &amp; 에콰도르 현장 소식</span>
                     </div>
 
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm">
-                        <span class="bg-emerald-50 text-emerald-900 px-3 py-1 rounded-md font-bold border border-emerald-200">
+                    <div class="flex flex-wrap gap-2 text-[11px]">
+                        <span class="bg-emerald-50 text-emerald-800 px-3 py-1 rounded-md font-semibold border border-emerald-100">
                             🏥 장인어른 회복과 치유
                         </span>
-                        <span class="bg-blue-50 text-blue-900 px-3 py-1 rounded-md font-bold border border-blue-200">
+                        <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-md font-semibold border border-blue-100">
                             🌊 이까바뇨스 교회 6명 세례 예식
                         </span>
                     </div>
 
-                    <div class="space-y-4 text-gray-900 text-base md:text-lg leading-relaxed font-normal">
+                    <div class="space-y-3.5 text-gray-700 text-xs md:text-sm leading-relaxed font-normal">
                         <p>
                             지난 여름, 한국에 계신 장인어른의 갑작스러운 건강 악화 소식을 접하고 저희 부부는 황급히 귀국길에 올랐습니다. 연세가 많으신 데다 병세가 급작스럽게 악화되어 마음의 부담과 걱정이 컸지만, 소식을 듣고 정성껏 마음 모아 기도해 주신 수많은 동역자 여러분의 중보 기도 덕분에 위기를 무사히 넘길 수 있었습니다. 마침내 장인어른께서 안정을 되찾으시고 본 치료와 항암 치료를 시작하시게 되었습니다. 절망 대신 주님의 신실하신 치료하심을 경험하게 하신 은혜에 머리 숙여 깊은 감사를 드립니다.
                         </p>
@@ -357,66 +353,68 @@
 
                     <!-- Photo Gallery -->
                     <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs md:text-sm font-bold text-gray-900 mb-3 flex items-center gap-1.5">
+                        <p class="text-xs font-bold text-gray-800 mb-2.5 flex items-center gap-1.5">
                             <i class="fa-solid fa-camera text-kfhi-600"></i>
                             <span>세례 예식 현장 갤러리</span>
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- [사진 교체 1] 세례식 사진 1 (openPhotoModal 내부 및 img src 주소 2개 변경) -->
                             <div onclick="openPhotoModal('1_1.jpg', '새로운 삶을 결단한 6명의 세례 성도들과 함께')" class="group cursor-pointer bg-warm-50 rounded-2xl p-2.5 border border-warm-200 hover:border-kfhi-400 transition shadow-sm">
-                                <div class="relative h-48 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
-                                    <img src="1_1.jpg" alt="새로운 삶을 결단한 6명의 세례 성도들과 함께" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="relative h-44 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
+                                    <img src="1_1.jpg","새로운 삶을 결단한 6명의 세례 성도들과 함께" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                                 </div>
-                                <p class="text-xs md:text-sm font-bold text-gray-900 text-center py-0.5">6명의 세례 성도들과 함께한 축복의 날</p>
+                                <p class="text-xs font-bold text-gray-800 text-center py-0.5">6명의 세례 성도들과 함께한 축복의 날</p>
                             </div>
 
+                            <!-- [사진 교체 2] 세례식 사진 2 (openPhotoModal 내부 및 img src 주소 2개 변경) -->
                             <div onclick="openPhotoModal('1_2.jpg', '호르헤 목사님과 함께 세례문답')" class="group cursor-pointer bg-warm-50 rounded-2xl p-2.5 border border-warm-200 hover:border-kfhi-400 transition shadow-sm">
-                                <div class="relative h-48 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
-                                    <img src="1_2.jpg" alt="호르헤 목사님과 함께 세례문답" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="relative h-44 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
+                                    <img src="1_2.jpg","호르헤 목사님과 함께 세례문답" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                                 </div>
-                                <p class="text-xs md:text-sm font-bold text-gray-900 text-center py-0.5">호르헤 목사님과 함께 세례문답</p>
+                                <p class="text-xs font-bold text-gray-800 text-center py-0.5">호르헤 목사님과 함께 세례문답</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs md:text-sm">
-                        <button onclick="addReaction(this, 's1-grace')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-50 text-rose-800 hover:bg-rose-100 font-bold transition">
-                            <i class="fa-solid fa-heart text-rose-600"></i>
+                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs">
+                        <button onclick="addReaction(this, 's1-grace')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition">
+                            <i class="fa-solid fa-heart"></i>
                             <span>은혜가 됩니다</span>
-                            <span class="count font-extrabold ml-1">24</span>
+                            <span class="count font-extrabold">24</span>
                         </button>
-                        <button onclick="addReaction(this, 's1-pray')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-kfhi-50 text-kfhi-900 hover:bg-kfhi-100 font-bold transition">
-                            <i class="fa-solid fa-hands-praying text-kfhi-700"></i>
+                        <button onclick="addReaction(this, 's1-pray')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-kfhi-50 text-kfhi-800 hover:bg-kfhi-100 font-bold transition">
+                            <i class="fa-solid fa-hands-praying"></i>
                             <span>함께 기도해요</span>
-                            <span class="count font-extrabold ml-1">31</span>
+                            <span class="count font-extrabold">31</span>
                         </button>
                     </div>
 
                 </div>
             </article>
 
-            <!-- STORY CARD #2 -->
+            <!-- STORY CARD #2 (Restored Full Details) -->
             <article id="story-card-2" class="story-card-item bg-white/95 rounded-3xl border border-kfhi-100 shadow-card overflow-hidden transition hover:shadow-float backdrop-blur-sm">
-                <div class="p-6 md:p-8 space-y-5">
+                <div class="p-6 md:p-8 space-y-4">
                     
                     <div class="flex items-center justify-between flex-wrap gap-2 border-b border-gray-100 pb-3.5">
-                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-kfhi-50 border border-kfhi-200 text-kfhi-900 rounded-full text-xs md:text-sm font-bold">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-kfhi-50 border border-kfhi-200 text-kfhi-800 rounded-full text-xs font-bold">
                             <i class="fa-solid fa-school text-kfhi-600"></i>
                             <span>#2. 새 학기 지역 학교 및 보건 교육 사역 준비</span>
                         </span>
-                        <span class="text-xs text-gray-500 font-medium">에콰도르 학교 &amp; 보건 사역</span>
+                        <span class="text-xs text-gray-400 font-medium">에콰도르 학교 &amp; 보건 사역</span>
                     </div>
 
-                    <div class="flex flex-wrap gap-2 text-xs md:text-sm">
-                        <span class="bg-teal-50 text-teal-900 px-3 py-1 rounded-md font-bold border border-teal-200">
+                    <div class="flex flex-wrap gap-2 text-[11px]">
+                        <span class="bg-teal-50 text-teal-800 px-3 py-1 rounded-md font-semibold border border-teal-100">
                             🎒 9월 에콰도르 새 학기 개학
                         </span>
-                        <span class="bg-purple-50 text-purple-900 px-3 py-1 rounded-md font-bold border border-purple-200">
+                        <span class="bg-purple-50 text-purple-800 px-3 py-1 rounded-md font-semibold border border-purple-100">
                             ❤️ 감정·성교육 &amp; 생리 위생용품 지원
                         </span>
                     </div>
 
-                    <div class="space-y-4 text-gray-900 text-base md:text-lg leading-relaxed font-normal">
+                    <div class="space-y-3.5 text-gray-700 text-xs md:text-sm leading-relaxed font-normal">
                         <p>
                             에콰도르 현지에서는 9월을 맞이하여 아이들의 새로운 학년 과정이 시작되었습니다. 저희는 이번 학기에도 지역 아이들의 육체적 건강뿐 아니라 정서적·영적 성장을 돕기 위해 주변 학교 기관들과 밀접하게 협력하여 다양한 다각도 교육 사역을 준비하고 있습니다.
                         </p>
@@ -430,79 +428,81 @@
 
                     <!-- Photo Gallery -->
                     <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs md:text-sm font-bold text-gray-900 mb-3 flex items-center gap-1.5">
+                        <p class="text-xs font-bold text-gray-800 mb-2.5 flex items-center gap-1.5">
                             <i class="fa-solid fa-handshake text-kfhi-600"></i>
                             <span>학교 기관 협의 현장</span>
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <!-- [사진 교체 3] 학교사역 사진 1 (openPhotoModal 내부 및 img src 주소 2개 변경) -->
                             <div onclick="openPhotoModal('2_1.jpeg', '어거스틴 꾸에스타 학교 관계자 미팅')" class="group cursor-pointer bg-warm-50 rounded-2xl p-2.5 border border-warm-200 hover:border-kfhi-400 transition shadow-sm">
-                                <div class="relative h-48 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
-                                    <img src="2_1.jpeg" alt="어거스틴 꾸에스타 학교 관계자 미팅" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="relative h-44 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
+                                    <img src="2_1.jpeg","어거스틴 꾸에스타 학교 관계자 미팅" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                                 </div>
-                                <p class="text-xs md:text-sm font-bold text-gray-900 text-center py-0.5">어거스틴 꾸에스타 학교 사역 협의</p>
+                                <p class="text-xs font-bold text-gray-800 text-center py-0.5">어거스틴 꾸에스타 학교 사역 협의</p>
                             </div>
 
+                            <!-- [사진 교체 4] 학교사역 사진 2 (openPhotoModal 내부 및 img src 주소 2개 변경) -->
                             <div onclick="openPhotoModal('2_2.jpeg', '마누엘 꼬르도바 학교 관계자 미팅')" class="group cursor-pointer bg-warm-50 rounded-2xl p-2.5 border border-warm-200 hover:border-kfhi-400 transition shadow-sm">
-                                <div class="relative h-48 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
-                                    <img src="2_2.jpeg" alt="마누엘 꼬르도바 학교 관계자 미팅" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <div class="relative h-44 w-full rounded-xl overflow-hidden bg-gray-200 mb-2">
+                                    <img src="2_2.jpeg","마누엘 꼬르도바 학교 관계자 미팅" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                                 </div>
-                                <p class="text-xs md:text-sm font-bold text-gray-900 text-center py-0.5">마누엘 꼬르도바 학교 관계자 미팅</p>
+                                <p class="text-xs font-bold text-gray-800 text-center py-0.5">마누엘 꼬르도바 학교 관계자 미팅</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs md:text-sm">
-                        <button onclick="addReaction(this, 's2-grace')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-50 text-rose-800 hover:bg-rose-100 font-bold transition">
-                            <i class="fa-solid fa-heart text-rose-600"></i>
+                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs">
+                        <button onclick="addReaction(this, 's2-grace')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition">
+                            <i class="fa-solid fa-heart"></i>
                             <span>은혜가 됩니다</span>
-                            <span class="count font-extrabold ml-1">19</span>
+                            <span class="count font-extrabold">19</span>
                         </button>
-                        <button onclick="addReaction(this, 's2-pray')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-kfhi-50 text-kfhi-900 hover:bg-kfhi-100 font-bold transition">
-                            <i class="fa-solid fa-hands-praying text-kfhi-700"></i>
+                        <button onclick="addReaction(this, 's2-pray')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-kfhi-50 text-kfhi-800 hover:bg-kfhi-100 font-bold transition">
+                            <i class="fa-solid fa-hands-praying"></i>
                             <span>함께 기도해요</span>
-                            <span class="count font-extrabold ml-1">27</span>
+                            <span class="count font-extrabold">27</span>
                         </button>
                     </div>
 
                 </div>
             </article>
 
-            <!-- STORY CARD #3 -->
+            <!-- STORY CARD #3 (Restored Full Text & Nuance) -->
             <article id="story-card-3" class="story-card-item bg-white/95 rounded-3xl border border-kfhi-100 shadow-card overflow-hidden transition hover:shadow-float backdrop-blur-sm">
-                <div class="p-6 md:p-8 space-y-5">
+                <div class="p-6 md:p-8 space-y-4">
                     
                     <div class="flex items-center justify-between flex-wrap gap-2 border-b border-gray-100 pb-3.5">
-                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-amber-50 border border-amber-200 text-amber-950 rounded-full text-xs md:text-sm font-bold">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-900 rounded-full text-xs font-bold">
                             <i class="fa-solid fa-house-chimney-window text-amber-600"></i>
                             <span>#3. 화평가족 이야기 &amp; 중남미 선교사 대회 참석</span>
                         </span>
-                        <span class="text-xs text-gray-500 font-medium">자녀 성장 &amp; 재충전 소식</span>
+                        <span class="text-xs text-gray-400 font-medium">자녀 성장 &amp; 재충전 소식</span>
                     </div>
 
-                    <div class="space-y-4 text-gray-900 text-base md:text-lg leading-relaxed font-normal">
+                    <div class="space-y-3.5 text-gray-700 text-xs md:text-sm leading-relaxed font-normal">
                         <p>
-                            저희 두 자녀 <strong class="text-kfhi-900 font-bold">하윤이(중학교 2학년)</strong>와 <strong class="text-kfhi-900 font-bold">하성이(초등학교 6학년)</strong>도 새 학년을 맞아 새로운 학업과 친구 관계에 적응하고 있습니다. 낯선 타국 문화 환경 속에서도 늘 밝고 씩씩하게 자라주는 아이들이 참으로 대견하고 고맙습니다. 아이들이 학업 가운데 하나님을 아는 지혜를 얻고, 믿음의 참된 동역자들과 좋은 친구들을 만나 영 육간에 건강하게 자라도록 기도를 부탁드립니다.
+                            저희 두 자녀 <strong>하윤이(중학교 2학년)</strong>와 <strong>하성이(초등학교 6학년)</strong>도 새 학년을 맞아 새로운 학업과 친구 관계에 적응하고 있습니다. 낯선 타국 문화 환경 속에서도 늘 밝고 씩씩하게 자라주는 아이들이 참으로 대견하고 고맙습니다. 아이들이 학업 가운데 하나님을 아는 지혜를 얻고, 믿음의 참된 동역자들과 좋은 친구들을 만나 영 육간에 건강하게 자라도록 기도를 부탁드립니다.
                         </p>
                         <p>
-                            또한 저희 부부는 <strong class="text-kfhi-900 font-bold">'중남미 감리교 선교사 대회'</strong>에 참석하게 되었습니다. 선교지에 복귀한지 얼마안되어 여러모로 쉽지않은 결정이었지만, 에콰도르 파송 이후 처음으로 참석하는 선교사 대회라 저희에게도 참 뜻깊은 시간이 될 것 같습니다. 감리교 선교사로서 우리의 정체성과 부르심을 다시 한번 돌아보고, 중남미 각지에서 오랜시간 헌신해 오신 감리교 선배 선교사님들과 함께 사역의 기쁨과 아픔을 나누고, 하나님께서 부르신 첫 마음을 다시금 정돈하는 귀한 재충전의 시간이 될 것으로 기대하고 있습니다. 대회 이동 및 왕래 과정 속에서 안전과 건강을 지켜주시도록 함께 기도해 주시면 감사하겠습니다.
+                            또한 저희 부부는 <strong>'중남미 감리교 선교사 대회'</strong>에 참석하게 되었습니다. 선교지에 복귀한지 얼마안되어 여러모로 쉽지않은 결정이었지만, 에콰도르 파송 이후 처음으로 참석하는 선교사 대회라 저희에게도 참 뜻깊은 시간이 될 것 같습니다. 감리교 선교사로서 우리의 정체성과 부르심을 다시 한번 돌아보고, 중남미 각지에서 오랜시간 헌신해 오신 감리교 선배 선교사님들과 함께 사역의 기쁨과 아픔을 나누고, 하나님께서 부르신 첫 마음을 다시금 정돈하는 귀한 재충전의 시간이 될 것으로 기대하고 있습니다. 대회 이동 및 왕래 과정 속에서 안전과 건강을 지켜주시도록 함께 기도해 주시면 감사하겠습니다.
                         </p>
                     </div>
 
-                    <div class="p-5 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200 text-amber-950 font-bold serif-title text-base md:text-lg leading-relaxed">
+                    <div class="p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200 text-amber-950 font-semibold serif-title text-xs md:text-sm leading-relaxed">
                         "여호와 그가 네 앞에서 가시며 너와 함께 하사 너를 떠나지 아니하시며 버리지 아니하시리니 너는 두려워하지 말라 놀라지 말라" (신명기 31:8)
                     </div>
 
-                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs md:text-sm">
-                        <button onclick="addReaction(this, 's3-grace')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-rose-50 text-rose-800 hover:bg-rose-100 font-bold transition">
-                            <i class="fa-solid fa-heart text-rose-600"></i>
+                    <div class="flex items-center justify-between pt-3.5 border-t border-gray-100 text-xs">
+                        <button onclick="addReaction(this, 's3-grace')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition">
+                            <i class="fa-solid fa-heart"></i>
                             <span>은혜가 됩니다</span>
-                            <span class="count font-extrabold ml-1">35</span>
+                            <span class="count font-extrabold">35</span>
                         </button>
-                        <button onclick="addReaction(this, 's3-pray')" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-kfhi-50 text-kfhi-900 hover:bg-kfhi-100 font-bold transition">
-                            <i class="fa-solid fa-hands-praying text-kfhi-700"></i>
+                        <button onclick="addReaction(this, 's3-pray')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-kfhi-50 text-kfhi-800 hover:bg-kfhi-100 font-bold transition">
+                            <i class="fa-solid fa-hands-praying"></i>
                             <span>함께 기도해요</span>
-                            <span class="count font-extrabold ml-1">42</span>
+                            <span class="count font-extrabold">42</span>
                         </button>
                     </div>
 
@@ -513,70 +513,530 @@
     </section>
 
     <section class="py-10 md:py-14 px-4 bg-gradient-to-b from-kfhi-900 via-kfhi-950 to-gray-950 text-white relative overflow-hidden">
-        <div class="max-w-3xl mx-auto text-center relative z-10 space-y-4">
-            <h3 class="text-xl md:text-2xl font-bold text-kfhi-200 serif-title">동역으로 함께해 주세요</h3>
-            <p class="text-base md:text-lg text-gray-200 leading-relaxed max-w-xl mx-auto">
-                에콰도르의 영혼들에게 하나님 아버지의 화평과 소망이 온전히 전해지도록 기도로 함께 마음을 모아주세요.
-            </p>
+        
+        <!-- Subtle Map BG watermark -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+            <svg viewBox="0 0 600 600" fill="currentColor" class="w-[800px] h-[800px] text-kfhi-300">
+                <path d="M200,100 Q280,80 380,130 T480,220 Q500,320 440,420 T320,540 Q240,600 160,520 T140,320 Z" />
+            </svg>
+        </div>
+
+        <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+            
+            <div class="text-center space-y-1.5">
+                <div class="w-10 h-10 rounded-full bg-kfhi-700/80 text-kfhi-200 mx-auto flex items-center justify-center text-lg shadow-inner border border-kfhi-500/30">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="text-lg md:text-2xl font-bold serif-title text-kfhi-100">에콰도르에서 보내는 마음의 편지</h3>
+                <p class="text-xs text-kfhi-300 font-light">기다림 속에 신실하게 맺히는 열매들을 바라보며</p>
+            </div>
+
+            <div class="bg-white/5 backdrop-blur-md p-6 md:p-9 rounded-3xl border border-white/10 space-y-4 text-kfhi-100 text-xs md:text-sm leading-relaxed font-light">
+                <p>
+                    적도의 높은 하늘 아래에서 선교 현장의 하루하루를 살아가며, '기다림' 또한 하나님을 향한 순종의 매우 중요한 한 부분임을 배우고 있습니다.
+                </p>
+                <p>
+                    한국에서 장인어른의 치료와 회복을 간절히 바라고 기다리던 순간들, 에콰도르 현지 성도들이 선교사 부부의 복귀를 온 마음으로 기다려 치러낸 세례식, 그리고 지역 학교 사역의 문이 열리기까지 기도로 조용히 문을 두드리는 모든 과정 속에서 하나님께서 친히 앞서 일하고 계심을 확신합니다.
+                </p>
+                <p>
+                    때로는 진행 속도가 눈에 띄게 빠르지 않더라도, 주님께서 보여주신 바른 방향을 잃지 않고 겸손히 걸어가겠습니다. 한국과 전 세계 곳곳에서 보태주신 귀한 기도의 씨앗이, 이곳 에콰도르 땅에서 하나님이 기뻐하시는 화평으로 심은 아름다운 열매로 결실 맺히기를 간절히 소망합니다.
+                </p>
+
+                <div class="pt-6 border-t border-white/10 text-center space-y-1">
+                    <p class="text-xs text-kfhi-300">2026년 9월, 늘 변함없는 동행에 깊이 감사드리며</p>
+                    <p class="font-bold text-white text-sm md:text-base serif-title">
+                        적도의 나라 에콰도르에서 조완희·김영선(하윤, 하성) 선교사 드립니다. 
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <section id="prayers" class="py-8 md:py-12 px-4 bg-white/90 backdrop-blur-sm">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="text-center mb-6">
+                <span class="text-kfhi-700 text-xs font-extrabold tracking-widest uppercase block mb-1">Prayer Requests</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 serif-title">2026년 9월 중보기도 제목</h2>
+                <p class="text-xs text-gray-500 mt-1">버튼을 눌러 기도로 함께 마음을 모아주세요.</p>
+                <div class="w-12 h-1 bg-gradient-to-r from-kfhi-500 to-teal-600 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- Prayer List -->
+            <div class="space-y-3.5">
+                
+                <!-- Topic 1 -->
+                <div class="p-4 md:p-5 bg-warm-50/90 rounded-2xl border border-warm-200 hover:border-kfhi-300 transition shadow-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-xs shrink-0 mt-0.5">1</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 text-xs md:text-sm mb-1 flex items-center gap-2">
+                                <span>장인어른의 건강 치료와 완전한 회복을 위하여</span>
+                                <span class="text-[10px] bg-kfhi-100 text-kfhi-800 px-2 py-0.5 rounded font-normal">치유 중보</span>
+                            </h3>
+                            <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+                                진행 중인 항암 치료 과정 속에서 체력과 면역력이 강건하게 유지되게 하시고, 주님의 온전한 치유의 손길과 평안이 마음속에 늘 충만하도록 기도해 주세요.
+                            </p>
+                            <div class="mt-3 flex items-center justify-between pt-2 border-t border-warm-200/60">
+                                <button onclick="togglePray(this)" class="pray-btn flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-300 text-gray-700 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 transition shadow-sm">
+                                    <i class="fa-regular fa-heart text-rose-500 text-xs"></i>
+                                    <span>기도했습니다</span>
+                                    <span class="pray-count text-kfhi-700 font-extrabold ml-1">38</span>
+                                </button>
+                                <span class="text-[10px] text-gray-400">치유와 평안</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="p-4 md:p-5 bg-warm-50/90 rounded-2xl border border-warm-200 hover:border-kfhi-300 transition shadow-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-xs shrink-0 mt-0.5">2</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 text-xs md:text-sm mb-1 flex items-center gap-2">
+                                <span>이까바뇨스 세례 성도들의 영적 성장과 뿌리를 위하여</span>
+                                <span class="text-[10px] bg-kfhi-100 text-kfhi-800 px-2 py-0.5 rounded font-normal">양육 중보</span>
+                            </h3>
+                            <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+                                세례를 받은 6명의 현지 성도들이 세상의 흔들림이나 유혹 속에서도 믿음의 뿌리를 주님 안에 깊이 내리고 신실한 제자로 성장하도록 기도해 주세요.
+                            </p>
+                            <div class="mt-3 flex items-center justify-between pt-2 border-t border-warm-200/60">
+                                <button onclick="togglePray(this)" class="pray-btn flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-300 text-gray-700 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 transition shadow-sm">
+                                    <i class="fa-regular fa-heart text-rose-500 text-xs"></i>
+                                    <span>기도했습니다</span>
+                                    <span class="pray-count text-kfhi-700 font-extrabold ml-1">45</span>
+                                </button>
+                                <span class="text-[10px] text-gray-400">믿음 양육</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="p-4 md:p-5 bg-warm-50/90 rounded-2xl border border-warm-200 hover:border-kfhi-300 transition shadow-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-xs shrink-0 mt-0.5">3</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 text-xs md:text-sm mb-1 flex items-center gap-2">
+                                <span>새 학기 지역 학교 및 보건 사역의 문이 열리도록</span>
+                                <span class="text-[10px] bg-kfhi-100 text-kfhi-800 px-2 py-0.5 rounded font-normal">사역 중보</span>
+                            </h3>
+                            <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+                                어거스틴 꾸에스타, 마누엘 꼬르도바 학교 및 행정 담당자들과의 미팅이 순조롭게 협의되어 아이들을 향한 차세대 교육 사역의 문이 활짝 열리게 하소서.
+                            </p>
+                            <div class="mt-3 flex items-center justify-between pt-2 border-t border-warm-200/60">
+                                <button onclick="togglePray(this)" class="pray-btn flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-300 text-gray-700 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 transition shadow-sm">
+                                    <i class="fa-regular fa-heart text-rose-500 text-xs"></i>
+                                    <span>기도했습니다</span>
+                                    <span class="pray-count text-kfhi-700 font-extrabold ml-1">33</span>
+                                </button>
+                                <span class="text-[10px] text-gray-400">현지 협력</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="p-4 md:p-5 bg-warm-50/90 rounded-2xl border border-warm-200 hover:border-kfhi-300 transition shadow-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-kfhi-600 text-white flex items-center justify-center font-black text-xs shrink-0 mt-0.5">4</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-900 text-xs md:text-sm mb-1 flex items-center gap-2">
+                                <span>자녀들의 학업 적응과 선교사 대회를 위하여</span>
+                                <span class="text-[10px] bg-kfhi-100 text-kfhi-800 px-2 py-0.5 rounded font-normal">가정 중보</span>
+                            </h3>
+                            <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+                                하윤, 하성이가 새 학년 학교생활에 잘 적응하고, 처음 참석하는 중남미 선교사 대회를 통해 안전과 영적 리프레시를 만끽하게 하소서.
+                            </p>
+                            <div class="mt-3 flex items-center justify-between pt-2 border-t border-warm-200/60">
+                                <button onclick="togglePray(this)" class="pray-btn flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-300 text-gray-700 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 transition shadow-sm">
+                                    <i class="fa-regular fa-heart text-rose-500 text-xs"></i>
+                                    <span>기도했습니다</span>
+                                    <span class="pray-count text-kfhi-700 font-extrabold ml-1">56</span>
+                                </button>
+                                <span class="text-[10px] text-gray-400">안전과 재충전</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Encouragement Board -->
+            <div class="mt-6 bg-warm-50/90 rounded-2xl p-4.5 border border-warm-200">
+                <h3 class="text-xs font-bold text-gray-900 mb-1 flex items-center gap-1.5">
+                    <i class="fa-solid fa-comments text-kfhi-600"></i>
+                    <span>선교사님 가정을 향한 응원 한 줄</span>
+                </h3>
+                
+                <div class="flex gap-2 my-2.5">
+                    <input type="text" id="encouragement-input" placeholder="응원과 축복의 메시지를 남겨주세요." class="flex-1 bg-white border border-gray-300 text-xs px-3.5 py-2 rounded-xl focus:outline-none focus:border-kfhi-500">
+                    <button onclick="addEncouragement()" class="bg-kfhi-600 hover:bg-kfhi-700 text-white font-bold text-xs px-4 py-2 rounded-xl transition shrink-0">
+                        등록
+                    </button>
+                </div>
+
+                <div id="message-list" class="space-y-2 max-h-36 overflow-y-auto">
+                    <div class="bg-white p-2.5 rounded-xl border border-gray-100 text-xs text-gray-700 flex justify-between items-center">
+                        <span>"에콰도르 땅에 하나님의 화평의 열매가 맺히길 축복합니다!"</span>
+                        <span class="text-[10px] text-gray-400">방금 전</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="support" class="py-8 md:py-12 px-4 bg-warm-50/80">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="text-center mb-6">
+                <span class="text-kfhi-700 text-xs font-extrabold tracking-widest uppercase block mb-1">Mission Support</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 serif-title">선교 후원 안내 및 연락처</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-kfhi-500 to-teal-600 mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- Official Organizations -->
+            <div class="bg-white p-4.5 rounded-2xl border border-warm-200 shadow-card mb-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    
+                    <div class="flex items-center gap-3 p-3 bg-kfhi-50/60 rounded-xl border border-kfhi-100">
+                        <!-- [로고 교체 1-2] 기독교대한감리회 로고 (하단 후원안내) -->
+                        <img src="logo_1.png" alt="기독교대한감리회" class="h-9 w-auto object-contain shrink-0">
+                        <div>
+                            <span class="text-[10px] font-bold text-kfhi-800 block">파송교회</span>
+                            <span class="text-xs font-extrabold text-gray-900">기독교대한감리회 광명교회</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-emerald-50/60 rounded-xl border border-emerald-100">
+                        <!-- [로고 교체 2-2] 희망친구 기아대책 로고 (하단 후원안내) -->
+                        <img src="logo_2.png" alt="희망친구 기아대책" class="h-7 w-auto object-contain shrink-0">
+                        <div>
+                            <span class="text-[10px] font-bold text-emerald-800 block">파송기관</span>
+                            <span class="text-xs font-extrabold text-gray-900">희망친구 기아대책</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Accounts -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+                
+                <div class="bg-white p-4.5 rounded-2xl border border-gray-200 shadow-card relative hover:border-kfhi-300 transition">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="px-2.5 py-0.5 bg-amber-100 text-amber-900 text-[11px] font-extrabold rounded-md">국민은행</span>
+                        <span class="text-xs text-gray-600 font-bold">예금주: 조완희</span>
+                    </div>
+                    <p class="text-base font-mono font-black text-gray-900 mb-2.5 tracking-wider">
+                        422402 01 186422
+                    </p>
+                    <button onclick="copyToClipboard('42240201186422', '국민은행 계좌번호가 복사되었습니다.')" class="w-full py-2 bg-kfhi-700 hover:bg-kfhi-800 text-white text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>계좌번호 복사하기</span>
+                    </button>
+                </div>
+
+                <div class="bg-white p-4.5 rounded-2xl border border-gray-200 shadow-card relative hover:border-kfhi-300 transition">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="px-2.5 py-0.5 bg-blue-100 text-blue-900 text-[11px] font-extrabold rounded-md">신한은행</span>
+                        <span class="text-xs text-gray-600 font-bold">예금주: 김영선</span>
+                    </div>
+                    <p class="text-base font-mono font-black text-gray-900 mb-2.5 tracking-wider">
+                        110 202 680959
+                    </p>
+                    <button onclick="copyToClipboard('110202680959', '신한은행 계좌번호가 복사되었습니다.')" class="w-full py-2 bg-kfhi-700 hover:bg-kfhi-800 text-white text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5 shadow-sm">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>계좌번호 복사하기</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Contacts -->
+            <div class="bg-white rounded-2xl p-4.5 border border-warm-200 shadow-card mb-5">
+                <h3 class="text-xs font-extrabold text-gray-900 mb-3 text-center flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-address-book text-kfhi-600"></i>
+                    <span>연락처 및 이메일</span>
+                </h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
+                    <div class="p-2.5 bg-amber-50/60 rounded-xl border border-amber-200/80 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-comment text-amber-500 text-sm"></i>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-800">조완희 선교사 카톡</p>
+                                <p class="text-xs text-gray-600 font-mono font-bold">chosgood</p>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('chosgood', '카카오톡 ID(chosgood)가 복사되었습니다.')" class="text-[10px] bg-white border border-amber-300 hover:bg-amber-100 px-2 py-0.5 rounded font-bold text-amber-900 transition">복사</button>
+                    </div>
+
+                    <div class="p-2.5 bg-amber-50/60 rounded-xl border border-amber-200/80 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-comment text-amber-500 text-sm"></i>
+                            <div>
+                                <p class="text-[10px] font-bold text-gray-800">김영선 선교사 카톡</p>
+                                <p class="text-xs text-gray-600 font-mono font-bold">sunny974</p>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('sunny974', '카카오톡 ID(sunny974)가 복사되었습니다.')" class="text-[10px] bg-white border border-amber-300 hover:bg-amber-100 px-2 py-0.5 rounded font-bold text-amber-900 transition">복사</button>
+                    </div>
+                </div>
+
+                <div class="p-2.5 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-gray-600 text-sm"></i>
+                        <div>
+                            <p class="text-[10px] font-bold text-gray-800">이메일 문의</p>
+                            <p class="text-xs text-gray-600 font-mono font-bold">wan20sun2@naver.com</p>
+                        </div>
+                    </div>
+                    <button onclick="copyToClipboard('wan20sun2@naver.com', '이메일 주소가 복사되었습니다.')" class="text-[10px] bg-white border border-gray-300 hover:bg-gray-100 px-2 py-0.5 rounded font-bold text-gray-800 transition">복사</button>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="bg-gradient-to-r from-kfhi-900 via-emerald-900 to-teal-900 text-white rounded-2xl p-4.5 text-center shadow-float">
+                <p class="text-xs text-kfhi-200 font-medium mb-3">
+                    페이스북, 인스타그램에서 현지 사역 소식을 확인해 보세요.
+                </p>
+                <div class="flex items-center justify-center gap-2">
+                    <a href="https://www.facebook.com/wanhee.cho.501" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                        <i class="fa-brands fa-facebook text-blue-400"></i>
+                        <span>페이스북</span>
+                    </a>
+                    <a href="https://www.instagram.com/cho.wanhee/" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5">
+                        <i class="fa-brands fa-instagram text-pink-400"></i>
+                        <span>인스타그램</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-8 px-4 text-xs border-t border-gray-800">
+        <div class="max-w-3xl mx-auto text-center space-y-2.5">
+            <div class="flex items-center justify-center gap-2 text-kfhi-400 font-bold text-xs">
+                <i class="fa-solid fa-leaf"></i>
+                <span>에콰도르 선교소식지 제21호</span>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed font-medium">
+                파송교회: 기독교대한감리회 광명교회 | 파송기관: 희망친구 기아대책
+            </p>
+            
+            <p class="text-gray-500 leading-relaxed text-[11px]">
+                에콰도르 조완희 · 김영선 (하윤, 하성) 선교사 소식지<br/>
+                이메일: wan20sun2@naver.com | 카카오톡: chosgood / sunny974
+            </p>
+
+            <p class="text-gray-600 text-[10px] pt-3 border-t border-gray-900">
+                &copy; 2026 화평으로 심은 열매. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Mobile Fixed Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white/95 backdrop-blur border-t border-gray-200 p-2.5 flex gap-2 shadow-2xl">
+        <a href="#stories" class="flex-1 py-2.5 bg-warm-100 text-warm-900 font-extrabold rounded-xl text-xs text-center transition flex items-center justify-center gap-1">
+            <i class="fa-solid fa-book-open text-kfhi-600"></i>
+            <span>사역이야기</span>
+        </a>
+        <a href="#prayers" class="flex-1 py-2.5 bg-teal-50 text-teal-900 font-extrabold rounded-xl text-xs text-center transition flex items-center justify-center gap-1">
+            <i class="fa-solid fa-hands-praying text-teal-600"></i>
+            <span>기도제목</span>
+        </a>
+        <a href="#support" class="flex-1 py-2.5 bg-kfhi-600 text-white font-extrabold rounded-xl text-xs text-center transition flex items-center justify-center gap-1 shadow-md">
+            <i class="fa-solid fa-heart"></i>
+            <span>후원하기</span>
+        </a>
+    </div>
+
+    <!-- Toast Notification Overlay -->
+    <div id="toast" class="fixed bottom-20 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-gray-900/95 text-white px-5 py-2.5 rounded-full text-xs font-bold shadow-2xl transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2 border border-white/20">
+        <i class="fa-solid fa-check text-kfhi-400"></i>
+        <span id="toast-message">복사되었습니다.</span>
+    </div>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="fixed inset-0 z-50 bg-black/85 hidden items-center justify-center p-4 backdrop-blur-md" onclick="closePhotoModal()">
+        <div class="relative max-w-2xl w-full text-center" onclick="event.stopPropagation()">
+            <button onclick="closePhotoModal()" class="absolute -top-10 right-0 text-white hover:text-gray-300 text-2xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modal-img" src="" alt="확대 이미지" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl object-contain mb-2">
+            <p id="modal-caption" class="text-white text-xs font-bold bg-black/60 inline-block px-3 py-1.5 rounded-full border border-white/20"></p>
+        </div>
+    </div>
+
     <script>
-        // Scroll Progress Bar Logic
+        // Scroll Progress Bar
         window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
-            const progress = document.getElementById('scroll-progress');
-            if (progress) progress.style.width = scrolled + '%';
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
         });
 
-        // Tab Switching Logic
-        function switchStoryTab(tabId) {
-            const cards = document.querySelectorAll('.story-card-item');
-            const tabs = document.querySelectorAll('.story-tab');
-
-            tabs.forEach(t => {
-                t.classList.remove('bg-kfhi-600', 'text-white');
-                t.classList.add('bg-white', 'text-gray-800', 'border', 'border-gray-300');
+        // Story Tab Filter Switching Function
+        function switchStoryTab(tabKey) {
+            document.querySelectorAll('.story-tab').forEach(btn => {
+                btn.classList.remove('bg-kfhi-600', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'border', 'border-gray-200', 'text-gray-700');
             });
 
-            const activeTabBtn = document.getElementById('tab-' + tabId);
-            if(activeTabBtn) {
-                activeTabBtn.classList.remove('bg-white', 'text-gray-800', 'border', 'border-gray-300');
-                activeTabBtn.classList.add('bg-kfhi-600', 'text-white');
+            const activeBtn = document.getElementById('tab-' + tabKey);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'border', 'border-gray-200', 'text-gray-700');
+                activeBtn.classList.add('bg-kfhi-600', 'text-white', 'shadow-sm');
             }
 
-            cards.forEach(card => {
-                if (tabId === 'all') {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = (card.id === 'story-card-' + tabId.replace('story', '')) ? 'block' : 'none';
-                }
-            });
+            const card1 = document.getElementById('story-card-1');
+            const card2 = document.getElementById('story-card-2');
+            const card3 = document.getElementById('story-card-3');
+
+            if (tabKey === 'all') {
+                card1.style.display = 'block';
+                card2.style.display = 'block';
+                card3.style.display = 'block';
+            } else if (tabKey === 'story1') {
+                card1.style.display = 'block';
+                card2.style.display = 'none';
+                card3.style.display = 'none';
+            } else if (tabKey === 'story2') {
+                card1.style.display = 'none';
+                card2.style.display = 'block';
+                card3.style.display = 'none';
+            } else if (tabKey === 'story3') {
+                card1.style.display = 'none';
+                card2.style.display = 'none';
+                card3.style.display = 'block';
+            }
         }
 
-        // Reaction Button Logic
+        // Reactions
         function addReaction(btn, key) {
             const countSpan = btn.querySelector('.count');
-            let current = parseInt(countSpan.textContent || '0');
-            countSpan.textContent = current + 1;
-            btn.classList.add('scale-105');
-            setTimeout(() => btn.classList.remove('scale-105'), 200);
+            let currentCount = parseInt(countSpan.innerText);
+
+            if (!btn.classList.contains('reacted')) {
+                btn.classList.add('reacted', 'ring-2', 'ring-offset-1');
+                countSpan.innerText = currentCount + 1;
+                
+                const heart = document.createElement('i');
+                heart.className = 'fa-solid fa-heart text-rose-500 absolute animate-float-heart pointer-events-none';
+                heart.style.left = '50%';
+                heart.style.top = '0';
+                btn.appendChild(heart);
+                setTimeout(() => heart.remove(), 700);
+
+                showToast("감사의 공감이 더해졌습니다!");
+            } else {
+                btn.classList.remove('reacted', 'ring-2', 'ring-offset-1');
+                countSpan.innerText = currentCount - 1;
+            }
         }
 
-        // Clipboard Copy Helper
-        function copyToClipboard(text, msg) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert(msg || '복사되었습니다.');
-            }).catch(err => {
-                console.error('복사 실패:', err);
-            });
+        // Copy to Clipboard
+        function copyToClipboard(text, message) {
+            const tempInput = document.createElement("textarea");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast(message || "클립보드에 복사되었습니다.");
+            } catch (err) {
+                showToast("복사에 실패했습니다.");
+            }
+            
+            document.body.removeChild(tempInput);
         }
 
-        // Dummy Photo Modal Function
-        function openPhotoModal(imgSrc, title) {
-            alert(title);
+        // Toast Notification
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            
+            toastMsg.innerText = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+
+        // Toggle Pray Button
+        function togglePray(btn) {
+            const countSpan = btn.querySelector('.pray-count');
+            const icon = btn.querySelector('i');
+            let count = parseInt(countSpan.innerText);
+
+            if (!btn.classList.contains('prayed')) {
+                btn.classList.add('prayed', 'bg-rose-50', 'text-rose-600', 'border-rose-300');
+                btn.classList.remove('bg-white', 'text-gray-700');
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+                countSpan.innerText = count + 1;
+                
+                showToast("기도 동역자로 함께해 주셔서 감사합니다!");
+            } else {
+                btn.classList.remove('prayed', 'bg-rose-50', 'text-rose-600', 'border-rose-300');
+                btn.classList.add('bg-white', 'text-gray-700');
+                icon.classList.remove('fa-solid');
+                icon.classList.add('fa-regular');
+                countSpan.innerText = count - 1;
+            }
+        }
+
+        // Encouragement Message
+        function addEncouragement() {
+            const input = document.getElementById('encouragement-input');
+            const list = document.getElementById('message-list');
+            const text = input.value.trim();
+
+            if (!text) {
+                showToast("응원 메시지를 입력해주세요!");
+                return;
+            }
+
+            const div = document.createElement('div');
+            div.className = 'bg-kfhi-50 p-2.5 rounded-xl border border-kfhi-200 text-xs text-kfhi-900 flex justify-between items-center';
+            div.innerHTML = `<span>"${escapeHtml(text)}"</span><span class="text-[10px] text-kfhi-600 font-bold">방금 전</span>`;
+            
+            list.prepend(div);
+            input.value = '';
+            showToast("소중한 응원 메시지가 등록되었습니다!");
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+
+        // Photo Modal Functions
+        function openPhotoModal(imgSrc, caption) {
+            const modal = document.getElementById('photo-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalCaption = document.getElementById('modal-caption');
+
+            modalImg.src = imgSrc;
+            modalCaption.innerText = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePhotoModal() {
+            const modal = document.getElementById('photo-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
     </script>
 </body>
